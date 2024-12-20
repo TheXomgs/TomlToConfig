@@ -1,0 +1,23 @@
+num_a = 10
+num_b = -20
+arr = [5, 2, 9, -1]
+
+sum_result = ".(num_a num_b +)."
+diff_result = ".(num_a num_b -)."
+abs_result = ".(num_b abs)."
+sorted_arr = ".(arr sort)."
+
+[server]
+host_id = 1
+port = 8080
+settings = { max_connections = ".(num_a 50 +)." }
+
+[database]
+connections = { retries = 3, timeout = ".(30 num_b + abs)." }
+
+[complex]
+list_of_dicts = [
+  { key1 = ".(num_a num_b +).", key2 = ".(arr sort)." },
+  { key1 = 42, key2 = ".(arr sort)." }
+]
+nested_dict = { level1 = { level2 = { value = ".(num_b abs)." } } }
